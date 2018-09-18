@@ -1,15 +1,16 @@
+<div class="comment-form">
+  <%= simple_form_for [comment.commentable, comment], remote: true do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@comment) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.association :commentable %>
-    <%= f.association :user %>
-    <%= f.input :content %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-inputs">
+      <%= f.hidden_field :parent_id %>
+      <%= f.input :content, lable: false, placeholder: (f.object.parent_id.nil? ? '댓글을 입력해 주세요.' : '대댓글을 입력해 주세요.'), input_html: { data:{ 'comment-id': (comment.persisted? ? comment.id : 'new') }} %>
+      <div class="float-right">
+        <%= f.submit class: 'btn btn-primary btn-sm float-xs-right' %>
+        <%= link_to "Cancle", "#", 'data-reply': comment.parent_id.parent?, class: 'cancel-comment-link btn btn-primary btn-sm float-xs-right ml-1' if comment.persisted? or comment.parent %>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  <% end %>
+</div>

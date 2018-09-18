@@ -1,0 +1,11 @@
+<div id="comment-widget-of-commentable-<%= commentable.id %>" class="comments-widget">
+  <h2 class="comments-header">
+    Comment <small id="comments-count-of-commentable-<%= commentable.id %>"><%= commentable.comments.size %></small>
+  </h2>
+  <ul class="comments-list">
+    <!-- 게시글에 해당하는 댓글만 출력하기 위해서 -->
+    <%= render commentable.comments.where(parent: nil) %>
+  </ul>
+
+  <%= render "comments/form", comment: commentable.comments.build %>
+</div>
