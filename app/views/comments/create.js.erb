@@ -1,0 +1,18 @@
+<% if @comment.parent %>
+  $comment_parent = $("#comment_<%= @comment.parent.id %> > ul");
+  if(!$comment_parent.length){
+      $("#comment_<%= @comment.parent.id %>").append("<ul></ul>");
+      $comment_parent = $("#comment_<%= @comment.parent.id %> > ul");
+  }
+  $comment_form = $("#comment_<%= @comment.parent.id %> .comment-form form");
+<% else %>
+  $comment_parent = $("#comment-widget-of-commentable-<%= @commentable.id %> .comments-list");
+  $comment_form = $("#comment-widget-of-commentable-<%= @commentable.id %> .comment-form form");
+<% end %>
+
+<% if @comment.errors.empty? %>
+  $comment_parent.append("<%= j render @comment %>");
+  $comment_form[0].reset();
+<% else  %>
+  $comment_form.before("<div class='alert alert-warning alert-dismissible fade in' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>×</span><%= @comment.errors.full_messages.join('') %></div>").prev().delay(1500).slideUp();
+<% end %>
