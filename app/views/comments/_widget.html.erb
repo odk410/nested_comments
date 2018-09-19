@@ -3,7 +3,7 @@
     Comment <small id="comments-count-of-commentable-<%= commentable.id %>"><%= commentable.comments.size %></small>
   </h2>
   <ul class="comments-list">
-    <!-- 게시글에 해당하는 댓글만 출력하기 위해서 -->
+    <!-- 게시글에 해당하는 댓글만 출력하기 위해서, 이 경우 _comment.html.erb로 render 된다. -->
     <%= render commentable.comments.where(parent: nil) %>
   </ul>
 

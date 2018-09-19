@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy, :reply]
   before_action :set_commentable
 
   # GET /comments
@@ -66,6 +66,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def reply
+    @reply = @commentable.comments.build(parent: @comment)
+    puts @reply
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
@@ -78,6 +83,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:commentable_id, :commentable_type, :user_id, :content)
+      params.require(:comment).permit(:commentable_id, :commentable_type, :user_id, :content, :parent_id)
     end
 end
