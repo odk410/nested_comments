@@ -9,7 +9,8 @@
         <%= localize(comment.created_at, format: :long) %>
         [<%= link_to "Edit", edit_polymorphic_path([comment.commentable, comment]), class: 'edit-comment-link', remote: true  %>]
         [<%= link_to "Destroy", [comment.commentable, comment], method: :delete, class: 'delete-comment-link', data:{confirm:"Are your sure?"}, remote: true %>]
-        [<%= link_to "Reply", polymorphic_path([:reply, comment.commentable, comment]), class: 'reply-comment-link', remote: true %>]
+        <!--    만약 대대댓글 하고 싶으면 아래 조건문 없애면 됨    -->
+        <%= link_to "Reply", polymorphic_path([:reply, comment.commentable, comment]), class: 'reply-comment-link', remote: true unless comment.parent.present? %>
       </small>
     </div>
     <% if comment.replies.any? %>

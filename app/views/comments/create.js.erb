@@ -21,8 +21,12 @@ $comments_count = $("#comments-count-of-commentable-<%= @commentable.id %>")
   $comment_form[0].reset();
   //  만약 대댓글인 경우
   //대댓글 작성 후 form이 사라져야 함
-  <% if @comment.parent.present? %>
+  <% if @comment.parent.present %>
     $comment_form.remove();
+    $comment = $("#comment_");
+    $restore_link = $comment.find('a.delete-comment-link')[0];
+    $reply_link = $comment.find('a.reply-comment-link')[0];
+
   <% end %>
 <% else  %>
   $comment_form.before("<div class='alert alert-warning alert-dismissible fade in' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>×</span><%= @comment.errors.full_messages.join('') %></div>").prev().delay(1500).slideUp();
