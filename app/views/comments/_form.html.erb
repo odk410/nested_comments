@@ -14,3 +14,14 @@
     </div>
   <% end %>
 </div>
+
+<script>
+    $(function () {
+        $(".cancel-comment-link").on("click", function(e){
+            e.preventDefault();
+            console.log("Cancle");
+            $comment_form = $(this).closest('form');
+            $comment_form.remove();
+        })
+    })
+</script>
