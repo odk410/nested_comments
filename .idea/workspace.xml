@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be7c1c87-f561-4a04-b979-c36ae4b083ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/comments/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/comments/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/comments/destroy.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/comments/destroy.js.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -34,7 +32,7 @@
           <entry key="coffee" value="2" />
           <entry key="css" value="1" />
           <entry key="enc" value="1" />
-          <entry key="erb" value="16" />
+          <entry key="erb" value="17" />
           <entry key="js" value="2" />
           <entry key="key" value="1" />
           <entry key="rb" value="14" />
@@ -47,7 +45,7 @@
           <entry key="CoffeeScript" value="2" />
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="RHTML" value="16" />
+          <entry key="RHTML" value="17" />
           <entry key="Ruby" value="18" />
           <entry key="YAML" value="2" />
         </counts>
@@ -58,7 +56,7 @@
           <entry key="Ruby Console" value="11" />
           <entry key="coffee" value="147" />
           <entry key="css" value="3" />
-          <entry key="erb" value="4593" />
+          <entry key="erb" value="4623" />
           <entry key="js" value="4" />
           <entry key="rb" value="1003" />
           <entry key="yml" value="74" />
@@ -69,7 +67,7 @@
           <entry key="CSS" value="3" />
           <entry key="CoffeeScript" value="147" />
           <entry key="JavaScript" value="4" />
-          <entry key="RHTML" value="4593" />
+          <entry key="RHTML" value="4623" />
           <entry key="Ruby" value="1067" />
           <entry key="YAML" value="74" />
         </counts>
@@ -114,11 +112,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/comments/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            <state relative-caret-position="345">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/comments/destroy.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -185,7 +192,6 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/views/comments/destroy.js.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/edit.js.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/update.js.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/_widget.html.erb" />
@@ -198,6 +204,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/comments.coffee" />
         <option value="$PROJECT_DIR$/app/views/comments/_comment.html.erb" />
         <option value="$PROJECT_DIR$/app/views/comments/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/comments/destroy.js.erb" />
       </list>
     </option>
   </component>
@@ -432,12 +439,12 @@
       <option name="presentableId" value="Default" />
       <updated>1537255432036</updated>
       <workItem from="1537255434213" duration="13556000" />
-      <workItem from="1537320083311" duration="14618000" />
+      <workItem from="1537320083311" duration="15097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28174000" />
+    <option name="totallyTimeSpent" value="28653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,21 +459,21 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15618336" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15618336" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3296582" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3296582" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.24476296" />
+      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.24476296" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.47850055" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" visible="true" weight="0.31422272" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.31422272" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3296582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -582,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/destroy.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -692,8 +692,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/comments/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state relative-caret-position="345">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/comments/destroy.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
     </entry>

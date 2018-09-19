@@ -1,6 +1,6 @@
 //댓글 삭제시 댓글 개수 업데이트를 위해 변수를 설정
-$comments_count = $("#comments-count-of-commentable-");
-
+$comments_count = $("#comments-count-of-commentable-<%= @commentable.id %>");
+console.log($comments_count);
 <% if @comment.errors.empty? %>
   $comments_count.html("<%= @commentable.comments.size %>")
   $("#comment_<%= @comment.id %>").slideUp('fast');
