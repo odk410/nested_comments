@@ -1,3 +1,4 @@
+// 댓글인지 대댓글인지에 구분 @comment.parent가 true 이면 대댓글, @comment.parent가 false면 댓글
 <% if @comment.parent %>
   $comment_parent = $("#comment_<%= @comment.parent.id %> > ul");
   if(!$comment_parent.length){
@@ -10,7 +11,12 @@
   $comment_form = $("#comment-widget-of-commentable-<%= @commentable.id %> .comment-form form");
 <% end %>
 
+//댓글 갯수를 출력하기 위해 해당 tag를 변수로 설정
+$comments_count = $("#comments-count-of-commentable-<%= @commentable.id %>")
+
+//댓글 생성 시 오류가 없다면 댓글을 append해준다.
 <% if @comment.errors.empty? %>
+  $comments_count.html("<%= @commentable.comments.size %>");
   $comment_parent.append("<%= j render @comment %>");
   $comment_form[0].reset();
 <% else  %>
