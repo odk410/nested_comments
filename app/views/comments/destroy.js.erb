@@ -1,0 +1,9 @@
+//댓글 삭제시 댓글 개수 업데이트를 위해 변수를 설정
+$comments_count = $("#comments-count-of-commentable-");
+
+<% if @comment.errors.empty? %>
+  $comments_count.html("<%= @commentable.comments.size %>")
+  $("#comment_<%= @comment.id %>").slideUp('fast');
+<% else %>
+  $("#comments-widget-of-commentable-<%= @commentable.id %> .comments-header").after("<div class='alert alert-warning alert-dismissible fade in' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>×</span></button><%= @comment.errors.full_messages.join('') %></div>").next().delay(1500).slideUp('fast');
+<% end  %>
